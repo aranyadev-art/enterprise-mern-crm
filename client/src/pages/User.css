@@ -1,0 +1,98 @@
+.user-table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.user-table thead {
+  background: #1e88e5;
+  color: white;
+}
+
+.user-table th {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.user-table td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table tbody tr:hover {
+  background: #f5f9ff;
+  transition: 0.3s;
+}
+
+.role-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.role-badge.sales {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.role-badge.factory {
+  background: #ede7f6;
+  color: #5e35b1;
+}
+
+.status-badge {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.edit-btn {
+  background: #ffc107;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.delete-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  
+}

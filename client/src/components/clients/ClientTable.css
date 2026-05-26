@@ -1,0 +1,36 @@
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.client-table th,
+.client-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.client-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.client-status.Active {
+  background: #dcfce7;
+}
+
+.client-status.Inactive {
+  background: #fecaca;
+}
+
+.client-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}

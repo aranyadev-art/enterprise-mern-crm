@@ -1,0 +1,92 @@
+.sales-form-container,
+.sales-table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.sales-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.sales-form input,
+.sales-form select,
+.sales-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.sales-form textarea {
+  min-height: 100px;
+}
+
+.sales-btn {
+  background: #1e88e5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.sales-table thead {
+  background: #1e88e5;
+  color: white;
+}
+
+.sales-table tbody tr:hover {
+  background: #f5f9ff;
+}
+
+.priority-badge,
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.edit-btn {
+  background: orange;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  
+}

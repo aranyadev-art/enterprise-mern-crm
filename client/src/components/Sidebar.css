@@ -1,0 +1,61 @@
+.sidebar {
+
+width: 260px;
+min-height: 100vh;
+background: #0f172a;
+color: white;
+padding: 25px 20px;
+display: flex;
+flex-direction: column;
+
+}
+
+.logo {
+
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 40px;
+color: white;
+
+}
+
+.menu {
+
+list-style: none;
+padding: 0;
+margin: 0;
+
+}
+
+.menu li {
+
+margin-bottom: 12px;
+
+}
+
+.menu a {
+
+display: block;
+padding: 14px 18px;
+border-radius: 10px;
+text-decoration: none;
+color: #cbd5e1;
+font-size: 15px;
+font-weight: 500;
+transition: 0.3s;
+
+}
+
+.menu a:hover {
+
+background: #1e293b;
+color: white;
+
+}
+
+.active-menu {
+
+background: #2563eb;
+color: white !important;
+
+}

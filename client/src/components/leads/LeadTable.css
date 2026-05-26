@@ -1,0 +1,65 @@
+.lead-table-container {
+  overflow-x: auto;
+}
+
+.lead-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.lead-table th,
+.lead-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.status,
+.priority {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.status.New {
+  background: #dbeafe;
+}
+
+.status.Contacted {
+  background: #fef3c7;
+}
+
+.status.Qualified {
+  background: #dcfce7;
+}
+
+.status.Converted {
+  background: #bbf7d0;
+}
+
+.status.Lost {
+  background: #fecaca;
+}
+
+.priority.High {
+  background: #fecaca;
+}
+
+.priority.Medium {
+  background: #fef3c7;
+}
+
+.priority.Low {
+  background: #dcfce7;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+}

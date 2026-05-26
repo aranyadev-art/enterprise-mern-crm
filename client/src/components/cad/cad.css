@@ -1,0 +1,226 @@
+/* PAGE */
+
+.cad-page {
+
+  padding: 24px;
+  width: 100%;
+
+}
+
+/* HEADER */
+
+.cad-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+}
+
+.cad-title h1 {
+
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2937;
+
+}
+
+.cad-title p {
+
+  color: #6b7280;
+  margin-top: 5px;
+
+}
+
+/* BUTTON */
+
+.add-cad-btn {
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+
+}
+
+.add-cad-btn:hover {
+
+  background: #1d4ed8;
+
+}
+
+/* TABLE */
+
+.cad-table-wrapper {
+
+  background: white;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+}
+
+.cad-table {
+
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+.cad-table thead {
+
+  background: #f3f4f6;
+
+}
+
+.cad-table th {
+
+  text-align: left;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+
+}
+
+.cad-table td {
+
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+  color: #374151;
+
+}
+
+.cad-table tr:hover {
+
+  background: #f9fafb;
+
+}
+
+/* STATUS */
+
+.status-badge {
+
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+/* EMPTY */
+
+.empty-data {
+
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+
+}
+
+/* FORM */
+
+.cad-form {
+
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+}
+
+.cad-form-grid {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+}
+
+.cad-form-group {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cad-form-group label {
+
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+
+}
+
+.cad-form-group input,
+.cad-form-group textarea,
+.cad-form-group select {
+
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+
+}
+
+.cad-form-group textarea {
+
+  resize: none;
+
+}
+
+.full-width {
+
+  grid-column: span 2;
+
+}
+
+/* CHECKBOX */
+
+.checkbox-group {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 35px;
+
+}
+
+/* FORM BUTTONS */
+
+.form-buttons {
+
+  display: flex;
+  gap: 12px;
+
+}
+
+.save-btn {
+
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.cancel-btn {
+
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}

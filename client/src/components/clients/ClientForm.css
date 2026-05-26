@@ -1,0 +1,27 @@
+.client-form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.client-form {
+  display: grid;
+  gap: 15px;
+}
+
+.client-form input,
+.client-form select,
+.client-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.client-form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-btn {
+  background: #ddd;
+}
