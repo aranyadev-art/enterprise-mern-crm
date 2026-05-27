@@ -1,0 +1,54 @@
+.quotation-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.quotation-form,
+.quotation-table {
+  flex: 1;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.quotation-form input,
+.quotation-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease;
+  background: white;
+}
+.quotation-form input:focus,
+.quotation-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.quotation-form button {
+  width: 100%;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.quotation-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.quotation-table th,
+.quotation-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}

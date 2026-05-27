@@ -84,6 +84,16 @@ const Sidebar = () => {
         <NavLink to="/calculator" style={linkStyle}>
           Calculator
         </NavLink>
+
+        <NavLink to="/quotation" style={linkStyle}>
+          Quotation
+        </NavLink>
+        <NavLink to="/orders" style={linkStyle}>
+          Orders
+        </NavLink>
+        <NavLink to="/accounts" style={linkStyle}>
+          Accounts
+        </NavLink>
       </div> 
     </div> 
   );
