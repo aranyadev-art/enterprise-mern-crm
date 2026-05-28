@@ -94,6 +94,9 @@ const Sidebar = () => {
         <NavLink to="/accounts" style={linkStyle}>
           Accounts
         </NavLink>
+        <NavLink to="/factory" style={linkStyle}>
+          Factory
+        </NavLink>
       </div> 
     </div> 
   );

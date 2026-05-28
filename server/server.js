@@ -9,6 +9,8 @@ const clientRoutes = require("./routes/clientRoutes");
 const cadRoutes = require("./routes/cadRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 const accountRoutes = require("./routes/accountRoutes");
+const dashboardRoutes = require("./routes/dashboardRoutes");
+const factoryRoutes = require("./routes/factoryRoutes");
 const calculatorRoutes =
   require("./routes/calculatorRoutes");
  require("dotenv").config();
@@ -28,6 +30,8 @@ app.use("/api/clients", clientRoutes);
 app.use("/api/cads", cadRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/accounts", accountRoutes);
+app.use("/api/factories", factoryRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 app.use("/api/calculator", calculatorRoutes);
 app.get("/", (req, res) => {

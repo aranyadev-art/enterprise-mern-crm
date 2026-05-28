@@ -18,6 +18,7 @@ import Quotation from "./pages/Quotation";
 import Orders from "./pages/Orders";
 import Accounts from "./pages/Accounts";
 import Users from "./pages/Users";
+import Factory from "./pages/Factory";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
           <Route path="quotation" element={<Quotation />} />
           <Route path="orders" element={<Orders />} />
           <Route path="accounts" element={<Accounts />} />
+          <Route path="factory" element={<Factory />} />
 
         </Route>
 
