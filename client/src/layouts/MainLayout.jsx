@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
+
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+
   return (
     <div
       style={{
@@ -11,7 +15,7 @@ const MainLayout = () => {
       }}
     >
 
-      <Sidebar />
+<Sidebar sidebarOpen={sidebarOpen} />
 
       <div
         style={{
@@ -21,7 +25,7 @@ const MainLayout = () => {
         }}
       >
 
-        <Navbar />
+      <Navbar setSidebarOpen={setSidebarOpen} />
 
         <div
           style={{

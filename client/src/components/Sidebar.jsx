@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+function Sidebar({ sidebarOpen }) {
   const linkStyle = ({ isActive }) => ({
     display: "block",
     padding: "14px 16px",
