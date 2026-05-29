@@ -17,7 +17,9 @@ function Sidebar({ sidebarOpen }) {
   return (
     <div
       style={{
-        width: "260px",
+       width: sidebarOpen ? "260px" : "90px",
+       transition: "0.3s",
+       overflow: "hidden",
         background: "#111827",
         color: "white",
         minHeight: "100vh",
@@ -32,25 +34,29 @@ function Sidebar({ sidebarOpen }) {
           marginBottom: "35px",
         }}
       >
-        <h2
-          style={{
-            fontSize: "28px",
-            fontWeight: "bold",
-            margin: 0,
-          }}
-        >
-          CRM Panel
-        </h2>
+      {sidebarOpen && (
+         <h2
+           style={{
+             fontSize: "28px",
+             fontWeight: "bold",
+             margin: 0,
+           }}
+         >
+    CRM Panel
+  </h2>
+)}
 
-        <p
-          style={{
-            color: "#9ca3af",
-            marginTop: "6px",
-            fontSize: "14px",
-          }}
-        >
-          Enterprise Dashboard
-        </p>
+       {sidebarOpen && (
+          <p
+            style={{
+              color: "#9ca3af",
+              marginTop: "6px",
+              fontSize: "14px",
+            }}
+          >
+            Enterprise Dashboard
+          </p>
+        )}
       </div>
 
       {/* Menu */}
@@ -58,44 +64,44 @@ function Sidebar({ sidebarOpen }) {
       <div>
 
         <NavLink to="/" style={linkStyle}>
-          Dashboard
+          {sidebarOpen ? "Dashboard" : "🏠"}
         </NavLink>
 
         <NavLink to="/users" style={linkStyle}>
-          Users
+           {sidebarOpen ? "Users" : "👥"}
         </NavLink>
 
         <NavLink to="/leads" style={linkStyle}>
-          Leads
+          {sidebarOpen ? "Leads" : "📝"}
         </NavLink>
 
         <NavLink to="/clients" style={linkStyle}>
-          Clients
+          {sidebarOpen ? "Clients" : "🏢"}
         </NavLink>
 
         <NavLink to="/sales-jobs" style={linkStyle}>
-          Sales Jobs
+          {sidebarOpen ? "Sales Jobs" : "💼"}
         </NavLink>
 
         <NavLink to="/cad" style={linkStyle}>
-          CAD
+          {sidebarOpen ? "CAD" : "📐"}
         </NavLink>  
 
         <NavLink to="/calculator" style={linkStyle}>
-          Calculator
+          {sidebarOpen ? "Calculator" : "🧮"}
         </NavLink>
 
         <NavLink to="/quotation" style={linkStyle}>
-          Quotation
+          {sidebarOpen ? "Quotation" : "📋"}
         </NavLink>
         <NavLink to="/orders" style={linkStyle}>
-          Orders
+          {sidebarOpen ? "Orders" : "📦"}
         </NavLink>
         <NavLink to="/accounts" style={linkStyle}>
-          Accounts
+          {sidebarOpen ? "Accounts" : "💼"}
         </NavLink>
         <NavLink to="/factory" style={linkStyle}>
-          Factory
+          {sidebarOpen ? "Factory" : "🏭"}
         </NavLink>
       </div> 
     </div> 

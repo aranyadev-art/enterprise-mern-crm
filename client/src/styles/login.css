@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  min-height: 100vh;
+  background: #eef2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.login-card {
+  width: 1100px;
+  min-height: 650px;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+
+  box-shadow:
+    0 25px 70px rgba(15, 23, 42, 0.12);
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.login-left {
+  width: 45%;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crm-logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #6d28d9;
+  margin-bottom: 40px;
+}
+
+.login-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.login-left p {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.login-left form {
+  width: 100%;
+  max-width: 380px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-left input {
+  height: 58px;
+  padding: 0 18px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+
+  font-size: 15px;
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.login-left input:focus {
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 0 0 4px rgba(124, 58, 237, 0.15);
+}
+
+.login-left button {
+  height: 58px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #8b5cf6
+  );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.login-left button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(109, 40, 217, 0.35);
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.login-right {
+  width: 55%;
+
+  background:
+    linear-gradient(
+      rgba(76, 29, 149, 0.75),
+      rgba(91, 33, 182, 0.75)
+    ),
+    url("../assets/crm-dashboard.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.overlay {
+  height: 100%;
+
+  padding: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: white;
+}
+
+.overlay h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 20px;
+  line-height: 1.8;
+
+  max-width: 500px;
+
+  opacity: 0.95;
+}
+
+.features {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .login-card {
+    flex-direction: column;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+
+  .login-left {
+    padding: 40px;
+  }
+
+  .login-right {
+    min-height: 300px;
+  }
+
+  .overlay {
+    padding: 40px;
+  }
+
+  .overlay h2 {
+    font-size: 30px;
+  }
+
+  .overlay p {
+    font-size: 16px;
+  }
+
+  .login-left h2 {
+    font-size: 32px;
+  }
+}
