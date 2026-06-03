@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/accounts.css";
 
 const AccountForm = ({
   formData,
@@ -9,9 +10,9 @@ const AccountForm = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-6 rounded-xl shadow-md mb-8"
+      className="account-form"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="account-form-grid">
 
         <input
           type="text"
@@ -19,7 +20,7 @@ const AccountForm = ({
           placeholder="Client Name"
           value={formData.clientName}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="account-input"
           required
         />
 
@@ -29,7 +30,7 @@ const AccountForm = ({
           placeholder="Due Balance"
           value={formData.dueBalance}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="account-input"
           required
         />
 
@@ -39,7 +40,7 @@ const AccountForm = ({
           placeholder="Credit Limit"
           value={formData.creditLimit}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="account-input"
           required
         />
 
@@ -47,7 +48,7 @@ const AccountForm = ({
           name="shippingApproval"
           value={formData.shippingApproval}
           onChange={handleChange}
-          className="border p-3 rounded-lg"
+          className="account-input"
         >
           <option value="Yes">Yes</option>
           <option value="No">No</option>
@@ -57,9 +58,11 @@ const AccountForm = ({
 
       <button
         type="submit"
-        className="mt-5 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
+        className="account-submit-btn"
       >
-        {editingId ? "Update Account" : "Add Account"}
+        {editingId
+          ? "Update Account"
+          : "Add Account"}
       </button>
     </form>
   );

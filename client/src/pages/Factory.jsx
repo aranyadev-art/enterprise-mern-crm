@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles/factory.css";
 import axios from "axios";
 
 import FactoryForm from "../components/factory/FactoryForm";
@@ -38,7 +39,7 @@ const Factory = () => {
   }, []);
 
   return (
-    <div className="p-6">
+  <div className="factory-page">
       {showForm ? (
         <FactoryForm
           form={form}
@@ -48,14 +49,14 @@ const Factory = () => {
         />
       ) : (
         <>
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">
+          <div>
+            <h1>
               Factory Records
-            </h2>
+            </h1>
 
             <button
               onClick={() => setShowForm(true)}
-              className="bg-blue-600 text-white px-4 py-2 rounded"
+              className="factory-create-btn"
             >
               Create Factory Record
             </button>

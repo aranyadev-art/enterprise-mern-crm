@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react";
 import "../styles/login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -64,14 +66,35 @@ function Login() {
               }
             />
 
+         <div className="password-field">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter Password"
               value={password}
               onChange={(e) =>
                 setPassword(e.target.value)
               }
             />
+          
+            <button
+              type="button"
+              className="eye-btn"
+              onClick={() =>
+                setShowPassword(!showPassword)
+              }
+            >
+              {showPassword ? (
+                <EyeOff size={20} />
+              ) : (
+                <Eye size={20} />
+              )}
+            </button>
+        </div>
+                     <div className="forgot-password">
+                       <a href="/forgot-password">
+                         Forgot Password?
+                       </a>
+                        </div>
 
             <button type="submit">
               Login

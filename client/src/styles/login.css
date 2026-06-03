@@ -183,6 +183,53 @@
   gap: 10px;
 }
 
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+}
+
+.eye-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: transparent !important;
+  border: none;
+  width: auto !important;
+  height: auto !important;
+  padding: 0;
+
+  color: #555 !important;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.eye-btn svg {
+  color: #555 !important;
+  stroke: #555 !important;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #6d28d9;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */

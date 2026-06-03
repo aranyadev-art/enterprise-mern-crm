@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../styles/accounts.css";
 
 import {
   getAccounts,
@@ -13,7 +14,6 @@ import AccountTable from "../components/accounts/AccountTable";
 const Accounts = () => {
 
   const [accounts, setAccounts] = useState([]);
-
   const [editingId, setEditingId] = useState(null);
 
   const [formData, setFormData] = useState({
@@ -23,7 +23,6 @@ const Accounts = () => {
     shippingApproval: "Yes",
   });
 
-  // FETCH ACCOUNTS
   const fetchAccounts = async () => {
     try {
       const res = await getAccounts();
@@ -37,7 +36,6 @@ const Accounts = () => {
     fetchAccounts();
   }, []);
 
-  // HANDLE INPUT
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -45,12 +43,10 @@ const Accounts = () => {
     });
   };
 
-  // SUBMIT
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-
       if (editingId) {
         await updateAccount(editingId, formData);
         setEditingId(null);
@@ -72,9 +68,7 @@ const Accounts = () => {
     }
   };
 
-  // EDIT
   const handleEdit = (account) => {
-
     setFormData({
       clientName: account.clientName,
       dueBalance: account.dueBalance,
@@ -85,7 +79,6 @@ const Accounts = () => {
     setEditingId(account._id);
   };
 
-  // DELETE
   const handleDelete = async (id) => {
     try {
       await deleteAccount(id);
@@ -96,11 +89,14 @@ const Accounts = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="accounts-page">
 
-      <h1 className="text-3xl font-bold mb-6">
-        Account Management
-      </h1>
+      <div className="accounts-header">
+        <h1>Account Management</h1>
+        <p>
+          Manage customer balances, credit limits and shipping approvals.
+        </p>
+      </div>
 
       <AccountForm
         formData={formData}

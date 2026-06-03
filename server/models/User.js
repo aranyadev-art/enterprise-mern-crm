@@ -22,6 +22,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  resetToken: {
+  type: String,
+},
+
+resetTokenExpire: {
+  type: Date,
+},
 
   role: {
     type: String,

@@ -13,6 +13,8 @@ import Orders from "./pages/Orders";
 import Accounts from "./pages/Accounts";
 import Users from "./pages/Users";
 import Factory from "./pages/Factory";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 
 import ProtectedRoute from "./routes/ProtectedRoute";
 import Login from "./pages/Login";
@@ -24,7 +26,8 @@ function App() {
 
         {/* PUBLIC ROUTE */}
         <Route path="/login" element={<Login />} />
-
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         {/* PROTECTED ROUTES */}
         <Route
           path="/"

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../../styles/factory.css";
 import api from "../../services/api";
 
 const FactoryForm = ({
@@ -74,15 +75,19 @@ const FactoryForm = ({
   };
 
   return (
-    <div className="quotation-form">
+   <div className="factory-form-card">
       <h2>Create Factory Record</h2>
 
-      <form onSubmit={handleSubmit}>
+     <form
+  onSubmit={handleSubmit}
+  className="factory-form"
+>
 
         <select
           name="quotation"
           value={form.quotation}
           onChange={handleChange}
+          className="factory-input"
         >
           <option value="">
             Select Quotation
@@ -103,6 +108,7 @@ const FactoryForm = ({
           value={form.factoryEmployee}
           placeholder="Factory Employee"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <input
@@ -110,6 +116,7 @@ const FactoryForm = ({
           value={form.orderNo}
           placeholder="Order No"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <input
@@ -117,6 +124,7 @@ const FactoryForm = ({
           value={form.shippingNo}
           placeholder="Shipping No"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <input
@@ -124,6 +132,7 @@ const FactoryForm = ({
           value={form.metalWeight}
           placeholder="Metal Weight"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <input
@@ -131,6 +140,7 @@ const FactoryForm = ({
           value={form.stoneCtWeight}
           placeholder="Stone CT Weight"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <input
@@ -138,6 +148,7 @@ const FactoryForm = ({
           value={form.finalWeight}
           placeholder="Final Weight"
           onChange={handleChange}
+          className="factory-input"
         />
 
         <textarea
@@ -146,65 +157,33 @@ const FactoryForm = ({
           placeholder="Daily Comment"
           onChange={handleChange}
           rows="4"
+          className="factory-input"
         />
 
         {/* Completed Checkbox */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            gap: "10px",
-            marginTop: "15px",
-            marginBottom: "20px",
-          }}
-        >
+   <div className="factory-checkbox">
           <input
             id="completed"
             type="checkbox"
             name="completed"
             checked={form.completed}
             onChange={handleChange}
-            style={{
-              width: "18px",
-              height: "18px",
-              margin: 0,
-              flex: "0 0 auto",
-            }}
+            className="factory-checkbox-input"
           />
-
-          <label
-            htmlFor="completed"
-            style={{
-              margin: 0,
-              width: "auto",
-              display: "inline",
-              cursor: "pointer",
-            }}
-          >
+             <label
+               htmlFor="completed"
+               className="factory-checkbox-label"
+             >
             Completed
           </label>
         </div>
 
         {/* Buttons */}
-        <div
-          style={{
-            display: "flex",
-            gap: "10px",
-            marginTop: "20px",
-          }}
-        >
+     <div className="factory-btn-group">
           <button
             type="submit"
             disabled={loading}
-            style={{
-              padding: "10px 20px",
-              background: "#2563eb",
-              color: "#fff",
-              border: "none",
-              borderRadius: "6px",
-              cursor: "pointer",
-            }}
+          className="factory-save-btn"
           >
             {loading ? "Creating..." : "Create"}
           </button>
@@ -212,14 +191,7 @@ const FactoryForm = ({
           <button
             type="button"
             onClick={() => setShowForm(false)}
-            style={{
-              padding: "10px 20px",
-              background: "#6b7280",
-              color: "#fff",
-              border: "none",
-              borderRadius: "6px",
-              cursor: "pointer",
-            }}
+            className="factory-cancel-btn"
           >
             Cancel
           </button>

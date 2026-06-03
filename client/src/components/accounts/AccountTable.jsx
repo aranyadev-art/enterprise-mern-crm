@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/accounts.css";
 
 const AccountTable = ({
   accounts,
@@ -6,71 +7,72 @@ const AccountTable = ({
   handleDelete,
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-x-auto">
+    <div className="account-table-wrapper">
 
-      <table className="w-full">
+      <table className="account-table">
 
-        <thead className="bg-gray-100">
+        <thead>
           <tr>
-            <th className="p-4 text-left">Client</th>
-            <th className="p-4 text-left">Due Balance</th>
-            <th className="p-4 text-left">Credit Limit</th>
-            <th className="p-4 text-left">Excess</th>
-            <th className="p-4 text-left">Shipping</th>
-            <th className="p-4 text-left">Actions</th>
+            <th>Client</th>
+            <th>Due Balance</th>
+            <th>Credit Limit</th>
+            <th>Excess</th>
+            <th>Shipping</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
         <tbody>
+
           {accounts.map((account) => (
             <tr
               key={account._id}
-              className={`border-t ${
+              className={
                 account.excessCheck
-                  ? "bg-red-50"
+                  ? "exceeded-row"
                   : ""
-              }`}
+              }
             >
 
-              <td className="p-4">
-                {account.clientName}
-              </td>
+              <td>{account.clientName}</td>
 
-              <td className="p-4">
+              <td>
                 ₹ {account.dueBalance}
               </td>
 
-              <td className="p-4">
+              <td>
                 ₹ {account.creditLimit}
               </td>
 
-              <td className="p-4">
+              <td>
                 {account.excessCheck ? (
-                  <span className="text-red-600 font-bold">
+                  <span className="exceeded-text">
                     Exceeded
                   </span>
                 ) : (
-                  <span className="text-green-600">
+                  <span className="normal-text">
                     Normal
                   </span>
                 )}
               </td>
 
-              <td className="p-4">
+              <td>
                 {account.shippingApproval}
               </td>
 
-              <td className="p-4 flex gap-2">
+              <td>
 
                 <button
-                  onClick={() => handleEdit(account)}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+                  onClick={() =>
+                    handleEdit(account)
+                  }
+                  className="edit-btn"
                 >
                   Edit
                 </button>
 
                 <button
-                  className="bg-yellow-500 text-white px-4 py-2 rounded-lg"
+                  className="reminder-btn"
                 >
                   Reminder
                 </button>
@@ -79,14 +81,16 @@ const AccountTable = ({
                   onClick={() =>
                     handleDelete(account._id)
                   }
-                  className="bg-red-600 text-white px-4 py-2 rounded-lg"
+                  className="delete-btn"
                 >
                   Delete
                 </button>
 
               </td>
+
             </tr>
           ))}
+
         </tbody>
 
       </table>

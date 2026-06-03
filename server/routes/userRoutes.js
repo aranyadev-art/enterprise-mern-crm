@@ -12,7 +12,9 @@ const {
   getUsers,
   createUser,
   updateUser,
-  deleteUser
+  deleteUser,
+  forgotPassword,
+  resetPassword
   
   
 } = require("../controllers/userController");
@@ -33,6 +35,14 @@ router.post("/", protect, createUser);
 router.put("/:id", updateUser);
 
 router.delete("/:id", deleteUser);
+router.post(
+  "/forgot-password",
+  forgotPassword
+);
+router.post(
+  "/reset-password/:token",
+  resetPassword
+);
 
 
 

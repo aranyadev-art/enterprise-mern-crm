@@ -1,0 +1,135 @@
+.factory-page {
+  padding: 25px;
+}
+
+.factory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.factory-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.factory-header p {
+  margin-top: 5px;
+  color: #6b7280;
+}
+
+.factory-create-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: white;
+  font-weight: 600;
+
+  background: linear-gradient(
+    90deg,
+    #6d28d9,
+    #8b5cf6
+  );
+
+  transition: 0.3s;
+}
+
+.factory-create-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+  .factory-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}
+/* FORM CARD */
+
+.factory-form-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.factory-form-card h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #111827;
+}
+
+.factory-form {
+  display: grid;
+  gap: 15px;
+}
+
+.factory-input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.factory-input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.15);
+}
+
+.factory-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.factory-checkbox-label {
+  cursor: pointer;
+  color: #374151;
+}
+
+.factory-btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.factory-save-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+
+  background: linear-gradient(
+    90deg,
+    #6d28d9,
+    #8b5cf6
+  );
+}
+
+.factory-cancel-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  background: #6b7280;
+}
+
+.factory-save-btn:hover,
+.factory-cancel-btn:hover {
+  opacity: 0.95;
+}
