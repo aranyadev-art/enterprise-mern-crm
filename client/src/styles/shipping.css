@@ -1,0 +1,221 @@
+/* PAGE */
+
+.shipping-page {
+  padding: 20px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.shipping-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.shipping-header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.add-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* FORM CARD */
+
+.shipping-form-container {
+  width: 100%;
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  padding: 30px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.shipping-form-container h2 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* FORM GRID */
+
+.shipping-form-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* INPUTS */
+
+.shipping-form-container input,
+.shipping-form-container select {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  background: white;
+
+  transition: all 0.2s ease;
+}
+
+.shipping-form-container input:focus,
+.shipping-form-container select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* STATUS FULL WIDTH */
+
+.shipping-form-container select[name="status"] {
+  grid-column: 1 / -1;
+}
+
+/* BUTTONS */
+
+.form-buttons {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 12px 20px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.form-buttons button:first-child {
+  background: #16a34a;
+  color: white;
+}
+
+.form-buttons button:first-child:hover {
+  background: #15803d;
+}
+
+.form-buttons button:last-child {
+  background: #dc2626;
+  color: white;
+}
+
+.form-buttons button:last-child:hover {
+  background: #b91c1c;
+}
+
+/* TABLE */
+
+.shipping-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: white;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* TABLE HEADER */
+
+.shipping-table th {
+  background: #2563eb;
+
+  color: white;
+
+  padding: 15px;
+
+  text-align: left;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+/* TABLE BODY */
+
+.shipping-table td {
+  padding: 14px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-size: 14px;
+
+  color: #334155;
+}
+
+.shipping-table tr:hover {
+  background: #f8fafc;
+}
+
+/* LAST ROW */
+
+.shipping-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .shipping-form-container form {
+    grid-template-columns: 1fr;
+  }
+
+  .shipping-form-container select[name="status"] {
+    grid-column: auto;
+  }
+
+  .form-buttons {
+    justify-content: center;
+  }
+
+  .shipping-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

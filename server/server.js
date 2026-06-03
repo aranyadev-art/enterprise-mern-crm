@@ -11,6 +11,7 @@ const orderRoutes = require("./routes/orderRoutes");
 const accountRoutes = require("./routes/accountRoutes");
 const dashboardRoutes = require("./routes/dashboardRoutes");
 const factoryRoutes = require("./routes/factoryRoutes");
+const shippingRoutes = require("./routes/shippingRoutes");
 const calculatorRoutes =
   require("./routes/calculatorRoutes");
  require("dotenv").config();
@@ -32,7 +33,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/accounts", accountRoutes);
 app.use("/api/factories", factoryRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-
+app.use("/api/shippings", shippingRoutes);
 app.use("/api/calculator", calculatorRoutes);
 app.get("/", (req, res) => {
   res.send("Backend API Running...");

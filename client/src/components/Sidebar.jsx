@@ -104,6 +104,9 @@ function Sidebar({ sidebarOpen }) {
         <NavLink to="/factory" style={linkStyle}>
           {sidebarOpen ? "Factory" : "🏭"}
         </NavLink>
+        <NavLink to="/shipping" style={linkStyle}>
+          {sidebarOpen ? "Shipping" : "🚚"}
+        </NavLink>
       </div> 
     </div> 
   );

@@ -13,6 +13,7 @@ import Orders from "./pages/Orders";
 import Accounts from "./pages/Accounts";
 import Users from "./pages/Users";
 import Factory from "./pages/Factory";
+import Shipping from "./pages/Shipping";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="orders" element={<Orders />} />
           <Route path="accounts" element={<Accounts />} />
           <Route path="factory" element={<Factory />} />
+          <Route path="shipping" element={<Shipping />} />
         </Route>
 
       </Routes>

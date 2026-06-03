@@ -8,6 +8,8 @@ import {
   CartesianGrid,
 } from "recharts";
 import StatCard from "../components/dashboard/StatCard";
+import "../styles/dashboard.css";
+
 
 
 export default function Dashboard() {
@@ -50,105 +52,48 @@ export default function Dashboard() {
   { month: "Jul", revenue: 7490 },
 ];
   return (
-<div
-  style={{
-    padding: "30px",
-    background: "#f5f7fb",
-    minHeight: "100vh",
-  }}
->
+<div className="dashboard-container">
 
     {/* Welcome Banner */}
 
-<div
-  style={{
-    background:
-      "linear-gradient(90deg,#4f46e5,#2563eb,#9333ea)",
-    borderRadius: "24px",
-    padding: "40px",
-    minHeight: "260px",
-    boxShadow: "0 15px 40px rgba(0,0,0,0.15)",
-    marginBottom: "30px",
-  }}
->
+  <div className="dashboard-banner">
+  <div className="banner-left">
+    <h1 className="banner-title">
+      Good Morning, Admin 👋
+    </h1>
 
-  <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+    <p className="banner-subtitle">
+      Welcome back to your CRM workspace
+    </p>
 
-  <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+    <p className="banner-description">
+      Monitor leads, clients and revenue from one place.
+    </p>
 
-    {/* Left */}
-
-    <div className="flex-1">
-
-      <p className="text-blue-100 uppercase tracking-widest text-xs mb-3">
-        Enterprise CRM Dashboard
-      </p>
-       
-      <h1 className="text-5xl font-bold text-white mb-3">
-        Good Morning, Admin 👋
-      </h1>
-       <br></br>
-      <p className="text-blue-100 text-lg mb-8">
-        Here's what's happening with your business today.
-      </p>
-           <br></br>
-      <div className="flex gap-10">
-
-        <div>
-          <p className="text-blue-200 text-sm">
-            Revenue
-          </p>
-
-          <h3 className="text-4xl font-bold text-white">
-            ₹8,45,000
-          </h3>
-        </div>
-
-        <div>
-          <p className="text-blue-200 text-sm">
-            Growth
-          </p>
-
-          <h3 className="text-4xl font-bold text-green-300">
-            +18%
-          </h3>
-        </div>
-
+    <div className="banner-kpi-row">
+      <div className="banner-kpi-card">
+        <span className="kpi-label">Total Leads</span>
+        <h3>1,245</h3>
       </div>
 
+      <div className="banner-kpi-card">
+        <span className="kpi-label">Active Clients</span>
+        <h3>324</h3>
+      </div>
+
+      <div className="banner-kpi-card">
+        <span className="kpi-label">Revenue</span>
+        <h3>₹8.45L</h3>
+      </div>
     </div>
-
-    {/* Right */}
-
-    <div className="flex gap-4">
-       <div className="bg-white/15 backdrop-blur-md rounded-2xl p-10 min-w-[180px]">
-       <p className="text-blue-100 text-xs  mb-2 font-semibold pl-3 pt-3">
-        Active Leads
-      </p>
-
-        <h3 className="text-2xl font-bold text-white mt-2">
-          120
-        </h3>
-      </div>
-
-      <div className="bg-white/15 backdrop-blur-md rounded-2xl p-5 min-w-[180px]">
-        <p className="text-blue-100 text-sm">
-          Today
-        </p>
-
-        <h3 className="text-2xl font-bold text-white mt-2">
-          Monday
-        </h3>
-
-        <p className="text-blue-100 mt-1">
-          10:30 AM
-        </p>
-      </div>
-
-    </div>
-
   </div>
 
+  <div className="banner-right">
+    <div className="date-card">
+      <p className="day">Monday</p>
+      <p className="time">10:30 AM</p>
+    </div>
+  </div>
 </div>
 
     {/* Stats */}
