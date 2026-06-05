@@ -1,22 +1,29 @@
 const Lead = require("../models/Lead");
 const Client = require("../models/Client");
+const logActivity = require("../utils/activityLogger");
 
-// CREATE LEAD
 const createLead = async (req, res) => {
-
   try {
-
     const lead = await Lead.create(req.body);
 
+    await logActivity({
+      action: "Lead Created",
+      module: "Leads",
+      description:
+        lead.leadName ||
+        lead.companyName ||
+        "New Lead",
+      user: "Admin",
+    });
+
     res.status(201).json(lead);
-
   } catch (error) {
-
     res.status(500).json({
       message: error.message,
     });
   }
 };
+
 
 
 
@@ -51,6 +58,15 @@ const updateLead = async (req, res) => {
       req.body,
       { new: true }
     );
+    await logActivity({
+  action: "Lead Updated",
+  module: "Leads",
+  description:
+    updatedLead.leadName ||
+    updatedLead.companyName ||
+    "Lead Updated",
+  user: "Admin",
+});
 
     res.status(200).json(updatedLead);
 
@@ -71,7 +87,13 @@ const deleteLead = async (req, res) => {
   try {
 
     await Lead.findByIdAndDelete(req.params.id);
-
+ 
+    await logActivity({
+  action: "Lead Deleted",
+  module: "Leads",
+  description: `Lead ID: ${req.params.id}`,
+  user: "Admin",
+});
     res.status(200).json({
       message: "Lead deleted successfully",
     });
@@ -111,6 +133,15 @@ const convertLeadToClient = async (req, res) => {
     lead.status = "Converted";
 
     await lead.save();
+    await logActivity({
+  action: "Lead Converted",
+  module: "Leads",
+  description:
+    lead.companyName ||
+    lead.leadName ||
+    "Lead Converted",
+  user: "Admin",
+});
 
 
     res.status(200).json({

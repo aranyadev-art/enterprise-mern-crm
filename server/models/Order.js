@@ -23,10 +23,11 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
 
-    quotationId: {
-      type: String,
-      required: true,
-    },
+ quotation: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "Quotation",
+  required: true,
+},
 
     status: {
       type: String,

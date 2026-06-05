@@ -1,7 +1,10 @@
+
+
 const Lead = require("../models/Lead");
 const Client = require("../models/Client");
 const Order = require("../models/Order");
 const Account = require("../models/Account");
+const Activity = require("../models/Activity");
 
 const getDashboardSummary = async (req, res) => {
   try {
@@ -46,6 +49,26 @@ const getDashboardSummary = async (req, res) => {
   }
 };
 
+
+const getRecentActivities = async (req, res) => {
+  try {
+    const activities = await Activity.find()
+      .sort({ createdAt: -1 })
+      .limit(10);
+
+    res.status(200).json({
+      success: true,
+      activities,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 module.exports = {
+  getRecentActivities,
   getDashboardSummary,
 };

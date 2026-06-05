@@ -8,39 +8,76 @@ import {
   CartesianGrid,
 } from "recharts";
 import StatCard from "../components/dashboard/StatCard";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/dashboard.css";
 
 
 
 export default function Dashboard() {
-
+const [activities, setActivities] = useState([]);
+const [summary, setSummary] = useState({
+  totalLeads: 0,
+  totalClients: 0,
+  totalOrders: 0,
+  totalAccounts: 0,
+  totalDueBalance: 0,
+  exceededAccounts: 0,
+});
+useEffect(() => {
+  fetchActivities();
+  fetchSummary();
+}, []);
   
   const cards = [
-    {
-      title: "Total Leads",
-      value: "1,245",
-      growth: "+12%",
-      icon: "👥",
-    },
-    {
-      title: "Clients",
-      value: "324",
-      growth: "+8%",
-      icon: "🏢",
-    },
-    {
-      title: "Sales Jobs",
-      value: "86",
-      growth: "+15%",
-      icon: "💼",
-    },
-    {
-      title: "Revenue",
-      value: "₹8,45,000",
-      growth: "+18%",
-      icon: "💰",
-    },
-  ];
+  {
+    title: "Total Leads",
+    value: summary.totalLeads,
+    growth: "",
+    icon: "👥",
+  },
+  {
+    title: "Clients",
+    value: summary.totalClients,
+    growth: "",
+    icon: "🏢",
+  },
+  {
+    title: "Orders",
+    value: summary.totalOrders,
+    growth: "",
+    icon: "📦",
+  },
+  {
+    title: "Due Balance",
+    value: `₹${summary.totalDueBalance}`,
+    growth: "",
+    icon: "💰",
+  },
+];
+
+const fetchActivities = async () => {
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/dashboard/recent-activities"
+    );
+
+    setActivities(res.data.activities || []);
+  } catch (error) {
+    console.error("Activity Fetch Error:", error);
+  }
+};
+const fetchSummary = async () => {
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/dashboard"
+    );
+
+    setSummary(res.data.data);
+  } catch (error) {
+    console.error("Summary Error:", error);
+  }
+};
 
   const revenueData = [
   { month: "Jan", revenue: 4000 },
@@ -51,6 +88,8 @@ export default function Dashboard() {
   { month: "Jun", revenue: 6390 },
   { month: "Jul", revenue: 7490 },
 ];
+
+
   return (
 <div className="dashboard-container">
 
@@ -139,35 +178,30 @@ export default function Dashboard() {
 
         <div className="space-y-4">
 
-          <div className="flex justify-between border-b pb-3">
-            <span>📄 Quotation Created</span>
-            <span className="text-gray-500 text-sm">
-              2 mins ago
-            </span>
-          </div>
+  {activities.length === 0 ? (
+    <p className="text-gray-500">
+      No recent activity found
+    </p>
+  ) : (
+    activities.map((activity) => (
+      <div
+        key={activity._id}
+        className="flex justify-between border-b pb-3"
+      >
+        <span>
+          {activity.action}
+        </span>
 
-          <div className="flex justify-between border-b pb-3">
-            <span>📦 New Order Added</span>
-            <span className="text-gray-500 text-sm">
-              15 mins ago
-            </span>
-          </div>
+        <span className="text-gray-500 text-sm">
+          {new Date(
+            activity.createdAt
+          ).toLocaleString()}
+        </span>
+      </div>
+    ))
+  )}
 
-          <div className="flex justify-between border-b pb-3">
-            <span>👤 New Lead Created</span>
-            <span className="text-gray-500 text-sm">
-              1 hour ago
-            </span>
-          </div>
-
-          <div className="flex justify-between">
-            <span>🏢 Client Updated</span>
-            <span className="text-gray-500 text-sm">
-              Today
-            </span>
-          </div>
-
-        </div>
+</div>
 
       </div>
 

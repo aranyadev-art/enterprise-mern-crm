@@ -1,0 +1,12 @@
+2 , Diamond , Round , Diamond , X=1.90 , Y=1.90 , Z=1.18 , .03ct. (total .05ct.)
+4 , Diamond , Round , Diamond , X=1.80 , Y=1.80 , Z=1.12 , .02ct. (total .09ct.)
+96 , Diamond , Round , Diamond , X=1.20 , Y=1.20 , Z=.75 , .01ct. (total .62ct.)
+85 , Diamond , Round , Diamond , X=1.10 , Y=1.10 , Z=.68 , .00ct. (total .42ct.)
+162 , Diamond , Round , Diamond , X=1.00 , Y=1.00 , Z=.62 , .00ct. (total .60ct.)
+3505 , Diamond , Round , Diamond , X=1.70 , Y=1.70 , Z=1.06 , .02ct. (total 64.65ct.)
+134 , Diamond , Round , Diamond , X=1.40 , Y=1.40 , Z=.87 , .01ct. (total 1.38ct.)
+24 , Diamond , Round , Diamond , X=1.60 , Y=1.60 , Z=1.00 , .02ct. (total .37ct.)
+134 , Diamond , Round , Diamond , X=1.50 , Y=1.50 , Z=.93 , .01ct. (total 1.69ct.)
+35 , Diamond , Round , Diamond , X=.85 , Y=.85 , Z=.53 , .00ct. (total .08ct.)
+
+Total Gems: 4181   Total Weight: 69.95ct.

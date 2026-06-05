@@ -41,6 +41,11 @@ const shippingSchema = new mongoose.Schema(
       enum: ["Pending", "Packed", "Shipped", "Delivered"],
       default: "Pending",
     },
+quotation: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "Quotation",
+  required: true,
+}
   },
   {
     timestamps: true,
