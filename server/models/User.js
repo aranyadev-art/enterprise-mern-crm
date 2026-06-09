@@ -15,7 +15,10 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    lowercase: true,
+    trim: true,
+    error: "Email is required"
   },
 
   password: {
@@ -32,7 +35,7 @@ resetTokenExpire: {
 
   role: {
     type: String,
-    default: "Sales"
+    default: "User"
   },
 
   phone: String,
