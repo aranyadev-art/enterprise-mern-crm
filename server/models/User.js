@@ -51,6 +51,7 @@ resetTokenExpire: {
   status: {
     type: String,
     default: "Active"
+    
   },
 
   moduleAccess: [String]
