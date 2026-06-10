@@ -14,6 +14,7 @@ import "../styles/dashboard.css";
 
 
 
+
 export default function Dashboard() {
 const [activities, setActivities] = useState([]);
 const [summary, setSummary] = useState({
